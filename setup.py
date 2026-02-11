@@ -23,9 +23,9 @@ def run_command(command: list[str]):
         subprocess.run(command, check=False, capture_output=False)
     except Exception as exc:
         msg = f"offsecpkg post-install step failed: {exc}"
-        self.announce(msg, level=3)
+        print(msg)
     else:
-            self.announce("offsecpkg post-install step completed.", level=2)
+        print("offsecpkg post-install step completed.")
 
 
 README_PATH = Path(__file__).parent / "README.md"
